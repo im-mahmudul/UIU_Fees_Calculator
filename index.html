@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Fee Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Fee Calculator</h2>
+        <p class="description">Calculate your fee installments, including transport, gym, and waivers.</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="amount">Enter Amount:</label>
+        <input type="number" id="amount" placeholder="Enter the fee amount" required>
+    </div>
+
+    <div class="form-group">
+        <label>Add Additional Fees:</label>
+        <div class="fee-buttons">
+            <button id="addTransportFee" class="fee-button">Transport Fee (4000 TK)</button>
+            <button id="addGymFee" class="fee-button">Gymnasium Fee (1500 TK)</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="waiver">Select Waiver Percentage:</label>
+        <select id="waiver">
+            <option value="0">None (0%)</option>
+            <option value="25">25%</option>
+            <option value="50">50%</option>
+            <option value="100">100%</option>
+        </select>
+    </div>
+
+    <button class="calculate-btn" onclick="calculateFees()">Calculate</button>
+
+    <div class="result" id="result" style="display: none;">
+        <h3>Calculated Installments</h3>
+        <div class="result-details">
+            <p><strong>Total Amount After Fees & Waiver:</strong> <span id="totalAmount"></span> TK</p>
+            <p>1st Installment 40%: <span id="installment40"></span> TK</p>
+            <p>2nd Installment 30%: <span id="installment30"></span> TK</p>
+            <p>3rd Installment 30%: <span id="installment30Remaining"></span> TK</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
