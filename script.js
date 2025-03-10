@@ -1,4 +1,3 @@
-// Variables to hold the status of additional fees
 let transportFeeAdded = false;
 let gymFeeAdded = false;
 
